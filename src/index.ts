@@ -1,3 +1,1 @@
-import { parseHtmlToNotionBlocks } from './lib/parser';
-
-export { parseHtmlToNotionBlocks };
+export * from './lib/parser';
