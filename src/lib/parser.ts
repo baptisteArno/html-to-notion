@@ -1,6 +1,6 @@
 import { Parser } from 'htmlparser2';
 
-export const htmlToNotionBlocks = (html: string) => {
+export const parseHtmlToNotionBlocks = (html: string) => {
   const blocks = [];
   const parser = initParser(blocks);
   parser.write(html);

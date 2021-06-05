@@ -1,6 +1,6 @@
 import { Client } from '@notionhq/client';
 
-import { htmlToNotionBlocks } from '../lib/parser';
+import { parseHtmlToNotionBlocks } from '../lib/parser';
 
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 require('dotenv').config();
@@ -8,7 +8,7 @@ require('dotenv').config();
 const notion = new Client({ auth: process.env.NOTION_ACCESS_TOKEN });
 
 (async () => {
-  const blocks = htmlToNotionBlocks(htmlStringExample());
+  const blocks = parseHtmlToNotionBlocks(htmlStringExample());
   const response = await notion.pages.create({
     parent: {
       database_id: '80b829a4715b4f7bad51ddf85dbcf652',
