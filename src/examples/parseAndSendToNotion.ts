@@ -23,6 +23,15 @@ const notion = new Client({ auth: process.env.NOTION_ACCESS_TOKEN });
           },
         ],
       },
+      Author: {
+        type: 'rich_text',
+        rich_text: [
+          {
+            type: 'text',
+            text: { content: 'test' },
+          },
+        ],
+      },
     },
     children: blocks,
   });

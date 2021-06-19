@@ -1,6 +1,7 @@
+import { Block } from '@notionhq/client/build/src/api-types';
 import { Parser } from 'htmlparser2';
 
-export const parseHtmlToNotionBlocks = (html: string) => {
+export const parseHtmlToNotionBlocks = (html: string): Block[] => {
   const blocks = [];
   const parser = initParser(blocks);
   parser.write(html);
@@ -8,7 +9,7 @@ export const parseHtmlToNotionBlocks = (html: string) => {
   return blocks;
 };
 
-const initParser = (blocks) => {
+const initParser = (blocks: Block[]) => {
   let exploringElements: string[] = [];
   let currentBlock;
   let currentBlockType;
