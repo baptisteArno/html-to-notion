@@ -174,7 +174,7 @@ const initParser = (blocks: Block[]) => {
                   text: {
                     content: ' ' + cleanContent,
                     link: {
-                      url: currentSrc,
+                      url: currentSrc ?? 'https://www.notion.so/',
                     },
                   },
                 },
@@ -188,7 +188,7 @@ const initParser = (blocks: Block[]) => {
             text: {
               content: ' ' + cleanContent,
               link: {
-                url: currentSrc ?? '',
+                url: currentSrc ?? 'https://www.notion.so/',
               },
             },
           });
