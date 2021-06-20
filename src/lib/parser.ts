@@ -1,4 +1,10 @@
-import { Block } from '@notionhq/client/build/src/api-types';
+import {
+  Block,
+  HeadingOneBlock,
+  HeadingThreeBlock,
+  HeadingTwoBlock,
+  ParagraphBlock,
+} from '@notionhq/client/build/src/api-types';
 import { Parser } from 'htmlparser2';
 
 export const parseHtmlToNotionBlocks = (html: string): Block[] => {
@@ -11,9 +17,9 @@ export const parseHtmlToNotionBlocks = (html: string): Block[] => {
 
 const initParser = (blocks: Block[]) => {
   let exploringElements: string[] = [];
-  let currentBlock;
-  let currentBlockType;
-  let currentSrc;
+  let currentBlock: Block;
+  let currentBlockType: string;
+  let currentSrc: string;
   return new Parser({
     onopentag(tagName, attributes) {
       if (currentBlock || exploringElements.length === 0) {
@@ -65,7 +71,7 @@ const initParser = (blocks: Block[]) => {
                 },
               ],
             },
-          };
+          } as ParagraphBlock;
           currentBlockType = 'paragraph';
         } else {
           currentBlock[currentBlockType].text.push({
@@ -93,7 +99,7 @@ const initParser = (blocks: Block[]) => {
                 },
               ],
             },
-          };
+          } as HeadingOneBlock;
           currentBlockType = 'heading_1';
         } else {
           currentBlock[currentBlockType].text.push({
@@ -119,7 +125,7 @@ const initParser = (blocks: Block[]) => {
                 },
               ],
             },
-          };
+          } as HeadingTwoBlock;
           currentBlockType = 'heading_2';
         } else {
           currentBlock[currentBlockType].text.push({
@@ -145,7 +151,7 @@ const initParser = (blocks: Block[]) => {
                 },
               ],
             },
-          };
+          } as HeadingThreeBlock;
           currentBlockType = 'heading_3';
         } else {
           currentBlock[currentBlockType].text.push({
@@ -174,7 +180,7 @@ const initParser = (blocks: Block[]) => {
                 },
               ],
             },
-          };
+          } as ParagraphBlock;
           currentBlockType = 'paragraph';
         } else {
           currentBlock[currentBlockType].text.push({
@@ -182,7 +188,7 @@ const initParser = (blocks: Block[]) => {
             text: {
               content: ' ' + cleanContent,
               link: {
-                url: currentSrc,
+                url: currentSrc ?? '',
               },
             },
           });

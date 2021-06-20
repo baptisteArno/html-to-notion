@@ -473,10 +473,10 @@
     "@nodelib/fs.scandir" "2.1.4"
     fastq "^1.6.0"
 
-"@notionhq/client@^0.1.8":
-  version "0.1.8"
-  resolved "https://registry.yarnpkg.com/@notionhq/client/-/client-0.1.8.tgz#466a0e2d1637aafeb3710f80039ca65f2b638385"
-  integrity sha512-nfNHpTZfrtHeoYmKDCTUEEn8tIY3cN+0Cv+QXZKYgH0PAt3IxqjPMXZR0tdfsHX5NqzwEGB3oeQMl6uPtkGY+A==
+"@notionhq/client@^0.1.9":
+  version "0.1.9"
+  resolved "https://registry.yarnpkg.com/@notionhq/client/-/client-0.1.9.tgz#866c6a66b0533c9a62d9e99c0d97e3d4b9eb4e48"
+  integrity sha512-hClAGWAT/IAgRp9P6K1dl5fYg2CsQ1NSftKLx3tmz4yx12cAyp3FFEflmLD/PLg+xPlRpnK7WkvjromBuBplHg==
   dependencies:
     got "^11.8.2"
 
