@@ -28,5 +28,5 @@ const notionBlocks = parseHtmlToNotionBlocks(rawHtml);
 
 ## To-Do
 
-[ ] Support lists
-[ ] Support decorated texts
+- [ ] Support lists
+- [ ] Support decorated texts
