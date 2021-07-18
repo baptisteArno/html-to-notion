@@ -1,6 +1,6 @@
 {
   "name": "html-to-notion",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Convert an HTML string into Notion blocks",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",

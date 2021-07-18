@@ -10,7 +10,7 @@ class TextParser extends _1.default {
                 return Object.assign(Object.assign({}, buildingBlock), { block: {
                         object: 'block',
                         type: this.type,
-                        paragraph: {
+                        [this.type]: {
                             text: [
                                 {
                                     type: 'text',
