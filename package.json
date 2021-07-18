@@ -1,7 +1,7 @@
 {
-  "name": "notionbox-parser",
+  "name": "html-to-notion",
   "version": "0.2.0",
-  "description": "notionbox-parser",
+  "description": "Convert an HTML string into Notion blocks",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
   "repository": "https://github.com/baptisteArno/notionbox-parser",
